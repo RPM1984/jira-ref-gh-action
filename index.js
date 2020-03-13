@@ -5,7 +5,8 @@ const projectName = core.getInput('project-name');
 const prDescription = github.context.payload &&
                       github.context.payload.pull_request &&
                       github.context.payload.pull_request.body;
-core.info(prDescription);
+console.log(github.context.payload);
+console.log(prDescription);
 const isValid = prDescription &&
                 prDescription.includes(projectName);
 if (!isValid) {
