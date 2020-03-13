@@ -1,0 +1,10 @@
+name: "JIRA Reference Verifier"
+description: "Check for JIRA reference in PR description"
+author: "https://github.com/RPM1984"
+inputs:
+    project-name:
+      description: 'The JIRA project code to look for'
+      required: true
+runs:
+  using: "node12"
+  image: "index.js"
